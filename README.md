@@ -1,16 +1,21 @@
 # Image Classification Project (PyTorch)
 
-This repository contains a binary image classification project implemented in **PyTorch**. It includes a logistic regression baseline, a simple neural network model, full training and evaluation loops, and visualization of misclassified images. A final model class is provided in the required format for **automated grading**.
+This repository contains a supervised image classification project developed in the context of a Master 2 course on deep learning. The work includes baseline models, convolutional architectures, full training/evaluation loops, and a final report summarizing the experiments.
 
 ## Project Content
 - Data loading with `ImageFolder`
 - Preprocessing: `Resize`, `ToTensor`, `Normalize`
 - Logistic regression baseline (`nn.Linear`)
-- MLP model with one hidden layer and ReLU
-- Training and validation loops
-- Test evaluation and confusion matrix
-- Display of misclassified images
-- Template `final_model` class + loading of `final_model_trained_weights.pth`
+- Simple MLP model
+- Convolutional models (ResNet18, ResNet34, EfficientNet, DenseNet) tested on small and large datasets
+- Training loops, validation monitoring, confusion matrix
+- Misclassified image visualization
+- Regularization methods: data augmentation, dropout, label smoothing, early stopping
+- Final model based on **ResNet18** with tuned hyperparameters
+
+## Report
+A short PDF report summarizing the experimental setup, results, and model selection is included:
+- *Classification supervisée d’images d’éoliennes – Rapport de projet* :contentReference[oaicite:1]{index=1}
 
 ## Dataset Structure
 ```
@@ -28,11 +33,11 @@ matplotlib
 numpy
 ```
 
-Install with:
+Install:
 ```
 pip install torch torchvision matplotlib numpy
 ```
 
 ## Notes
-- The final evaluation block follows the structure expected for automated correction.
+- The final model template follows the format required for automated grading.
 - The dataset and trained weights are not included in the repository.
